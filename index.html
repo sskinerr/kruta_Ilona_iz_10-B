@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+				<title>Сайт Ілони</title>
+
+<!-- Ілона, якщо ти це чітаєш то це добре, я
+ оставив тобі коментарі в коді щоб ти
+ розібралась шо де і як працює. коментарі
+ знаходятся у строці з слешом і зірочкою, або,
+  між мінусами і стрілочками, прям як цей оо ти
+ чітаєш -->
+ 
+ 			   			<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+						
+/*скріпт який відповідає за плавну загрузку сторінкі*/
+
+setTimeout(function(){
+document.body.classList.add('body_visible');},0);
+
+/*скріпт який відповідає за паралакс хеадера*/
+
+window.onload = () => {
+var bg = document.querySelector(".header");
+window.addEventListener("scroll", () => {
+
+/*для збільшення або зменшення еффекту поміняй цифру сорок, чим менша цифра тим більше збільшується перша фотка при скролі*/
+
+bg.style.backgroundSize =+  110+window.pageYOffset/40+"%";});}
+
+
+$(function (){
+    $("#submenu").hide();    
+    $("#box").click(function() {
+    $("#submenu").slideToggle(1000);
+    });});
+$(function (){
+    $("#submenu1").hide();    
+    $("#box1").click(function() {
+    $("#submenu1").slideToggle(1000);
+    });});
+$(function (){
+    $("#submenu2").hide();    
+    $("#box2").click(function() {
+    $("#submenu2").slideToggle(1000);
+    });});
+
+</script>
+
+<!-- підключення font шрифта -->
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<style>
+/* підключення шрифта */						
+@font-face{font-family:shrift; src:url(4.ttf);}
+@font-face{font-family:shrif; src:url(5.otf);}
+
+#top{background: rgba( 123, 118, 118, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.0px );
+-webkit-backdrop-filter: blur( 8.0px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding:10px;
+position:fixed;
+text-align:center;
+width:100%;
+color: black;
+font-weight:600;
+font-family:shrif;
+z-index:333;}
+
+
+/* стіль всієї сторінкі і колір заднього фона */
+				body{background:
+			 linear-gradient(#b1ecb1,#ecb1b1);
+				margin:0;
+				height:100vh;}
+
+/* ця штука відповідає за плавне появлення
+ сайта, щоб регулювати швидкість зміни цифру
+ у свойстві transition з 0.7 на яке хочеш. чим
+ більше цифра тим довше появлятся сайт*/
+ 
+.body_hide {
+	opacity: 0;
+	transition: 0.7s opacity ease-in-out;}
+.body_visible {
+	opacity: 1;}
+	
+	
+
+	/* стиль надпису "Потрава" */
+	#header{color: white;
+							  font-size:37px;
+							  text-align:center;
+							  font-weight:600;
+							  letter-spacing:3px;
+							  opacity 0;
+							  width:40%;
+							  font-family:shrift;
+							  animation: anim 2.1s;
+							  background: rgba( 123, 118, 118, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.0px );
+-webkit-backdrop-filter: blur( 8.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding:20px;}
+
+/* стиль хеадера в якому сама перша фотка і надпис "Потрава" */
+.header {   
+    width: 100%;
+    height: 100vh;
+    background-image: url("sweet.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+/* анімація появлення "Потрава" */
+@keyframes anim {
+      0%{opacity: 0;}
+    100%{opacity: 1;}}
+    
+    #a1{color: white;
+    					text-align:center;
+    					font-size:23px;
+    					font-weight:500;
+    					font-family:shrif;
+    					padding:17px;
+    					margin-top:0px;
+    					background:
+    					linear-gradient(45deg,#ecb827,#ec4427);}
+    
+    #danger{color:#ff0a00;
+    								font-size:30px;
+    								font-family:shrif;
+    			    		font-weight:600;
+    			    		text-align:center;}
+    		
+    		#a2{text-align:center;
+    					font-size:20px;
+    					width:90%;
+    					margin-top:-20px;
+    					font-family:shrif;
+    					margin-left:auto;
+    					margin-right:auto;
+    					font-weight:600;}
+    					
+    					
+h2{ text-align:center;
+    text-shadow: 3px 3px #ffeeff;
+    color:#000;
+    margin-top: 20px;}
+    
+    
+.carousel-control.left, .carousel-control.right{
+   color: white; 
+background: rgba( 3, 3, 187, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+transition:0.7s;
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius:5px;
+
+position:absolute;
+top:50%;
+transform:translate(0,-50%);
+height:70px;}
+
+
+.carousel-indicators{
+    bottom: -155px;{}}
+.carousel-indicators li{
+    border-color: black;}
+.carousel-indicators li.active{
+    background-color:black;}
+    
+h3{text-shadow:2px 2px black !important;}
+
+img{filter: drop-shadow(5px 9px 2px #333) opacity(0.2);
+-webkit-filter: drop-shadow(5px 9px 2px #333);}
+
+#info{text-align:center;
+						font-size:22px;
+						margin-left:auto;
+						font-family:shrif;
+						padding-top:15px;
+						padding-bottom:15px;
+						margin-right:auto;
+						background:#b1ecb1;
+						font-weight:600;}
+
+#box,#box1,#box2{width:100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0px;
+    font-family:shrif;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    cursor: pointer;}
+
+#submenu,#submenu1,#submenu2{
+    background: white;
+    color: black;
+    border:3px solid black;
+    position:absolute;}
+    
+#submenu{z-index:3;}
+#submenu1{z-index:2;}
+#submenu2{z-index:1;}
+    
+#rol{font-size:30px;
+      line-height:50px;}
+
+
+
+#content{font-size:20px;
+								 font-weight:600;}
+								 
+
+#please{text-align:center;
+	   					font-size:22px;
+				   		margin-left:auto;
+				   		font-family:shrift;
+				   		padding-top:15px;
+				   		padding-bottom:15px;
+					   	margin-right:auto;
+				   		background:#ffcaaa;
+				   		font-weight:600;
+				   		margin-bottom:0px;}
+				   		
+iframe{margin-top:0px;
+						background:
+linear-gradient(30deg,#d5fff4,#ffcaaa);}
+
+</style>
+</head>
+<body class="body_hide">
+	
+	<p id="top">Створила Ілона Валага - 10Б</p>
+	
+<div class="header">
+<p id="header">Потрава</p>
+</div>
+
+<p id="a1">Цей сайт створено для людей, які люблять їжу, як я)</p>
+
+<p id="danger">ОБЕРЕЖНО!</p>
+
+<p id="a2">Якщо довго перебувати на сайті можна захотіти їсти</p>
+
+
+   
+         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="sushi.jpg">
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="pechenya.jpg">
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="IMG_20210209_113239_815.jpg">
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="spagetti.jpg">
+                <div class="carousel-caption">
+                
+                </div>
+            </div>     
+         </div>
+         <a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+         <a href="#myCarousel" class="right carousel-control" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+     </div>
+     
+     <p id="info">*для відображення інформації нажміть на будь який заголовок*</p>
+     <div class="box">
+     <div id="box">
+     <b id="rol">Роли/суші</b>
+     <div id="submenu">
+     <p id="content">Традиційна страва японської кухні зроблена на основі рису, обробленого рисовим оцтом чи сіллю, та різноманітних начинок чи нашарувань, серед яких переважають морські продукти, але можуть входити м'ясо, овочі, водорості, гриби чи яйця. Вони бувають сирими, приготовленими чи маринованими.</p>
+</div></div></div>
+
+<div class="box1">
+     <div id="box1">
+     <b id="rol">Торт</b>
+     <div id="submenu1">
+     <p id="content">Це кондитерській виріб, зазвичай зі здобного тіста з кремом, фруктами. Торт зазвичай складається з декількох коржів: бісквітне, листкове, або із тіста філа; із прошарками крему. Зверху торт прикрашають візерунками з крему та фруктів.</p>
+</div></div></div>
+
+<div class="box2">
+     <div id="box2">
+     <b id="rol">Шоколад</b>
+     <div id="submenu2">
+     <p id="content">Це кондитерський виріб, що виготовляється з використанням плодів какао. Шоколад можуть  використовувати для приготування кремів, тортів, напоїв, цукерок. Також вважають, що він знімає втому/стрес. Чорний шоколад піднімає настрій; містить стеаринову кислоту, яка очищає судини.</p>
+</div></div></div>
+
+<p id="please">Якщо ви попали на цей сайт, пройдіть, будь ласка, опитування</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSciiwuWFq4D8t_9Uss00uhHvY2UTLoMiBXqXtqwUrE-j-l8fg/viewform?embedded=true" width="100%" height="2095" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+</body>
+</html>
